@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url(img.jpg);
+            background-size: cover; /* Make sure the background image covers the entire area */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: rgba(215, 231, 233, 0.5); /* this makes the transparent color*/
+            border-radius: 25px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Look dark in the shadow */
+            width: 360px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        p {
+            margin-bottom: 25px;
+            font-size: 16px;
+            color: brown;
+        }
+        .social-icons {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            gap: 20px; /* Space between buttons */
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: black;
+            background-color: yellowgreen;
+            padding: 12px;
+            border-radius: 30px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 16px; /* Font size for buttons */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .social-icons a i {
+            margin-right: 8px; /* Space between icon and text */
+        }
+        .social-icons a:hover {
+            background-color: #357ab8;
+            transform: translateY(-3px);
+        }
+        .quote {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #140101;
+            font-style: italic;
+            border-top: 2px solid #e0e0e0;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1><u>Connect With Us.</u></h1>
+        <p>Follow us on our social media platforms:</p>
+        <ul class="social-icons">
+            <li><a href="https://www.instagram.com/rajesh25.01/" target="Rajesh instagram">Instagram</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100027969767192" target="Rajesh facebook">Facebook</a></li>
+            <li><a href="https://x.com/Rajeshgupta2594" target="Rajesh twitter">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/rajesh-gupta-650979318/" target="Rajesh linkedin">LinkedIn</a></li>
+        </ul>
+        <div class="quote">
+            "The only limit to our realization of tomorrow is our doubts of today."
+        </div>
+    </div>
+
+</body>
+</html>

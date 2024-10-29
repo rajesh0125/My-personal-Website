@@ -7,14 +7,13 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-image: url("img.jpg");
 }
 
 .custom-cursor {
     position: absolute;
     width: 30px; /* Size of the lightning bolt */
     height: 30px;
-    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FFDD57"%3E%3Cpath d="M13 2L3 12h6v8l10-10h-6V2z"/%3E%3C/svg%3E');
     background-size: cover; /* Ensure the lightning image fits */
     opacity: 1; /* Fully visible */
     pointer-events: none; /* Ensure the cursor doesn't interfere with clicks */
@@ -28,10 +27,11 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #007bff, #00c6ff);
-    color: white;
+    color:lightgoldenrodyellow;
     padding: 20px;
     text-align: center;
+    background: #027afa;
+    background-color: rgba(0, 123, 255, 0.57);
 }
 
 nav ul {
@@ -53,7 +53,9 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a:focus {
     color: #ffdd57;
-    outline: 2px solid #ffdd57; /* Focus outline for accessibility */
+    outline: 2.5px solid #ffdd57;
+    outline-style:ridge;
+    border-radius: 2%;
 }
 
 main {
@@ -61,11 +63,11 @@ main {
 }
 
 section {
-    margin: 20px 0;
+    margin: 20px;
     padding: 15px;
-    background: white;
     border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(210, 135, 135, 80);
+    background-color: rgba(215, 231, 233, 0.5);
 }
 
 .project-list {
@@ -78,37 +80,21 @@ section {
     flex: 1;
     margin: 10px;
     padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: transform 0.3s;
-    opacity: 0;
-    transform: translateY(20px); /* Start from below */
-    animation: fadeIn 0.5s forwards; /* Animation on load */
+    border: 2px solid #ddd;
+    border-radius: 10px;
 }
-
-.project:hover {
-    transform: scale(1.05);
-    background-color: #f0f8ff; /* Light background on hover */
-}
-
 .skills-list {
     list-style-type: none;
     padding: 0;
 }
 
 .skills-list li {
-    background: #007bff;
-    color: white;
+    background-color: rgba(215, 231, 233, 0.5);
+    color:black;
     padding: 5px 10px;
     margin: 5px 0;
     border-radius: 3px;
 }
-
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 0.8s forwards;
-}
-
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -119,8 +105,9 @@ section {
 footer {
     text-align: center;
     padding: 20px 0;
-    background:#007bff;
+    background:#027afa;
     color:white;
+    background-color: rgba(0, 123, 255, 0.57);
 }
 
 .socials a {

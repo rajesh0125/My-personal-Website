@@ -1,107 +1,196 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Information</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            background-image: url(img.jpg);
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        /* Container Fade-In Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        .container {
-            background-color: rgba(215, 231, 233, 0.5);
-            border-radius: 25px;
-            padding: 40px;
-            text-align: center;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            width: 360px;
-            opacity: 0;
-            animation: fadeInUp 1s ease-in-out forwards;
-        }
-        h1 {
-            font-size: 28px;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        p {
-            margin-bottom: 25px;
-            font-size: 16px;
-            color: brown;
-        }
-        .social-icons {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .social-icons a {
-            text-decoration: none;
-            color: black;
-            background-color: yellowgreen;
-            padding: 12px;
-            border-radius: 30px;
-            transition: background-color 0.3s, transform 0.3s;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .social-icons a i {
-            margin-right: 8px;
-        }
-        .social-icons a:hover {
-            background-color: #357ab8;
-            transform: translateY(-3px);
-        }
-        .quote {
-            margin-top: 30px;
-            font-size: 18px;
-            color: #140101;
-            font-style: italic;
-            border-top: 2px solid #e0e0e0;
-            padding-top: 15px;
-        }
-    </style>
-</head>
-<body>
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img.jpg") center/cover no-repeat;
+    color: #f5f5f5;
+    overflow-x: hidden;
+}
 
-    <div class="container">
-        <h1><u>Connect With Us.</u></h1>
-        <p>Follow us on our social media platforms:</p>
-        <ul class="social-icons">
-            <li><a href="https://www.instagram.com/rajesh25.01/" target="Rajesh instagram">Instagram</a></li>
-            <li><a href="https://www.facebook.com/profile.php?id=100027969767192" target="Rajesh facebook">Facebook</a></li>
-            <li><a href="https://x.com/Rajeshgupta2594" target="Rajesh twitter">Twitter</a></li>
-            <li><a href="https://www.linkedin.com/in/rajesh-gupta-650979318/" target="Rajesh linkedin">LinkedIn</a></li>
-        </ul>
-        <div class="quote">
-            "The only limit to our realization of tomorrow is our doubts of today."
-        </div>
-    </div>
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header {
+    color: lightgoldenrodyellow;
+    padding: 25px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.9), rgba(0, 150, 255, 0.7));
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 1.8em;
+    animation: fadeInSlide 1s ease-in-out;
+    position: relative;
+    margin-top: 20px;
+}
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    mix-blend-mode: overlay;
+}
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+    position: relative;
+}
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #ffdd57;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #ffdd57;
+    color: #333;
+}
+main {
+    padding: 30px 0;
+    animation: fadeIn 1.2s ease-in-out;
+}
+section {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: slideUp 1s forwards 0.2s;
+}
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.project {
+    flex: 1;
+    min-width: 280px;
+    max-width: 100%;
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.skills-list {
+    list-style-type: none;
+}
+.skills-list li {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #f5f5f5;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+.skills-list li:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    color: white;
+    background-color: rgba(0, 123, 255, 0.9);
+    border-top: 2px solid rgb(250, 245, 245);
+    font-size: 1.1em;
+}
+.socials a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+.socials a:hover,
+.socials a:focus {
+    color: #ffdd57;
+    transform: translateY(-3px);
+}
 
-</body>
-</html>
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .container, main {
+        padding: 10px;
+    }
+
+    .project {
+        flex: 1 1 100%;
+    }
+
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
